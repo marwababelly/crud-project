@@ -3,7 +3,7 @@ import './App.css';
 import Layout from './components/Layout/Layout';
 import CreateUser from './components/User/CreateUser';
 import Form from './Pages/Form';
-import List from './Pages/List';
+import AllUsers from './Pages/AllUsers';
 // import NotFound from './Pages/NotFound';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/create' element={<Form />}>
         </Route>
-        <Route path='/list' element={<List />}>
+        <Route path='/list' element={<AllUsers />}>
         </Route>
         {/* <Route path='*' element={<NotFound />}>
         </Route> */}
