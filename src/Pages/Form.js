@@ -1,5 +1,6 @@
 import { Fragment,useRef,useState } from 'react';
 // import { Prompt } from 'react-router-dom';
+import LoadingSpinner from '../components/UI/LoadingSpinner';
 import style from './Form.module.css';
 
 const Form = (props) => {
@@ -58,6 +59,11 @@ const Form = (props) => {
                     'Are you sure you want to leave?! All your entered data will be lost!'
                 }
             /> */}
+            {props.isLoading && (
+                <div className={style.loading}>
+                    <LoadingSpinner />
+                </div>
+            )}
             <form
                 onFocus={formFocusHandler}
                 className={style.form}

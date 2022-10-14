@@ -44,6 +44,7 @@ const useHttp = (requestFunction,startWithPending = false) => {
                     type: 'ERROR',
                     errorMessage: error.message || 'Something went wrong!',
                 });
+                console.log(error.message);
             }
         },
         [requestFunction]

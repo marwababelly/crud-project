@@ -1,4 +1,4 @@
-import { Route, Routes} from 'react-router-dom';
+import { Navigate, Route, Routes} from 'react-router-dom';
 import './App.css';
 import Layout from './components/Layout/Layout';
 import CreateUser from './components/User/CreateUser';
@@ -9,14 +9,12 @@ import AllUsers from './Pages/AllUsers';
 function App() {
   return (
     <Layout>
-      <CreateUser />
+      {/* <CreateUser /> */}
       <Routes>
-        <Route path='/create' element={<Form />}>
-        </Route>
-        <Route path='/list' element={<AllUsers />}>
-        </Route>
-        {/* <Route path='*' element={<NotFound />}>
-        </Route> */}
+        <Route path='/' element={<CreateUser />} />
+        <Route path='user/list' element={<AllUsers />} />
+        <Route path='user/:id/edit' element={<Navigate to='/create' />} />
+        {/* <Route path='*' element={<NotFound />} /> */}
       </Routes>
     </Layout>
   );

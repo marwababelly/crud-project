@@ -10,12 +10,12 @@ const MainNavigation = () => {
                 <nav className={style.nav}>
                     <ul>
                         <li>
-                            <NavLink to="/form" activeClassName={style.active}>
+                            <NavLink to="/" >
                                 Create User
                             </NavLink>  
                         </li>
                         <li>
-                            <NavLink to="/list" activeClassName={style.active}>
+                            <NavLink to="/user/list" >
                                 List User
                             </NavLink>  
                         </li>
@@ -23,6 +23,7 @@ const MainNavigation = () => {
                 </nav>
             </header>
         </Fragment>
+        // activeClassName={style.active}
     );
 };
 
